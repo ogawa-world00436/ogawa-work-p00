@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MUSIC</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="navber">
+            <div class="logo-wrap">
+                <img src="./images/icon-music.png" class="logo">
+                <h3>Ogawa World</h3>
+            </div>
+            <ul>
+                <li><a href="#">HOME</a></li>
+                <li><a href="#">MUSIC</a></li>
+                <li><a href="#">お問い合わせ</a></li>
+            </ul>
+        </div>
+
+        <div class="content">
+            <div class="left-col">
+                <h1>ORIGINAL<br>
+                SWEET<br>MUSIC</h1>
+            </div>
+            <div class="rigtht-col">
+                <p>Click Here To LIsten</p>
+                <img src="./images/play1.png" id="icon">
+            </div>
+        </div>
+    </div>
+
+
+
+    <audio id="mysong">
+        <source src="./audio/PhrygianScale-gt.mp3" type="audio/mp3">
+    </audio>
+
+    <script>
+
+        let ms = document.getElementById("mysong");
+        let ic = document.getElementById("icon");
+
+        icon.onclick = function() {
+            if (mysong.paused) {
+                mysong.play();
+                icon.src ="./images/paused1.png";
+            }
+            else {
+                mysong.pause();
+                icon.src = "./images/play1.png"
+            }
+
+        };
+
+
+    </script>
+    
+</body>
+</html>
